@@ -1,0 +1,18 @@
+<div class="box-it">
+    <form [formGroup]="regForm" (ngSubmit)="processRegister()">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" size="30" formControlName="name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" size="30" formControlName="email"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" [disabled]="regForm.invalid" class="btn btn-primary">Register</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
